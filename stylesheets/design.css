@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%; }
+
+div.wrapper {
+  height: 100%;
+  margin: auto;
+  position: relative;
+  width: 80%; }
+
+p.balance, p.bet {
+  border: solid 1px;
+  display: inline-block;
+  margin: 0;
+  padding: 3em 0;
+  width: 10em; }
+
+button.bets {
+  font-size: large;
+  height: 7em;
+  top: 10em;
+  width: 8em; }
