@@ -31,10 +31,10 @@ div.top {
     vertical-align: middle;
     width: 8em; }
   div.top p.balance {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #99ffff), color-stop(100%, white));
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #99ffff), color-stop(100%, whitesmoke));
     /* Safari 4+, Chrome 2+ */ }
   div.top p.bet {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff99ff), color-stop(100%, white));
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff99ff), color-stop(100%, whitesmoke));
     /* Safari 4+, Chrome 2+ */ }
 
 div.bottom {
@@ -50,3 +50,28 @@ div.bottom {
     height: 3em;
     top: 10em;
     width: 4em; }
+
+div.results {
+  margin: 2em 0 0 0; }
+  div.results p.labels {
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 2px #333333;
+    -moz-box-shadow: 0px 0px 2px #333333;
+    box-shadow: 0px 0px 2px #333333;
+    display: inline-block;
+    font-size: x-large;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 0.3em;
+    vertical-align: middle;
+    width: 8em; }
+  div.results p.userNum {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffff99), color-stop(100%, whitesmoke));
+    /* Safari 4+, Chrome 2+ */ }
+  div.results p.compNum {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cccccc), color-stop(100%, whitesmoke));
+    /* Safari 4+, Chrome 2+ */ }

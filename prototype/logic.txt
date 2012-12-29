@@ -1,6 +1,6 @@
 var betSelected;
 
-if confirm
+if confirm 'alias proceed'
 	betSelected = $(#betSelected).val();
 	execute determineWinner( betSelected, balance );
 

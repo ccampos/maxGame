@@ -50,10 +50,10 @@ div.top {
 		width: 8em;
 	}
 	p.balance {
-	    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9ff), color-stop(100%, #fff)); /* Safari 4+, Chrome 2+ */
+	    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9ff), color-stop(100%, #f5f5f5)); /* Safari 4+, Chrome 2+ */
 	}
 	p.bet {
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f9f), color-stop(100%, #fff)); /* Safari 4+, Chrome 2+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f9f), color-stop(100%, #f5f5f5)); /* Safari 4+, Chrome 2+ */
 	}
 }
 
@@ -66,5 +66,26 @@ div.bottom {
 		height: 3em;
 		top: 10em;
 		width: 4em;
+	}
+}
+
+div.results {
+	margin: 2em 0 0 0;
+	p.labels {
+		@include round_corners_big;
+		@include box_shadow_inset;
+		display: inline-block;
+		font-size: x-large;
+		height: 100px;
+		line-height: 100px;
+		margin: 0 0.3em;
+		vertical-align: middle;
+		width: 8em;
+	}
+	p.userNum {
+	    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff9), color-stop(100%, #f5f5f5)); /* Safari 4+, Chrome 2+ */
+	}
+	p.compNum {
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ccc), color-stop(100%, #f5f5f5)); /* Safari 4+, Chrome 2+ */
 	}
 }
