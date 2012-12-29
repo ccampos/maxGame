@@ -25,7 +25,7 @@ $('.bets').click( function() {
 		elRemAttr = $('.bets');
 		setTimeout( function() {
 			displayResults(elRemAttr, results);
-		}, 2000);
+		}, 1000);
 
 		
 	};
