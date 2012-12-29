@@ -6,15 +6,20 @@
 	%body
 		.wrapper
 			.top
-				%p.labels.balance{ :value => 100 } &#36;100
+				%p.labels.balance{ :value => 100 }
+					&#36;100
+					%span.labelstxt Balance
 				%p.labels.bet
+					%span.labelstxt Bet
 			.bottom
 				%button.bets.five{ :value => 5 } &#36;5
 				%button.bets.ten{ :value => 10 } &#36;10
 				%button.bets.twentyFive{ :value => 25 } &#36;25
 			.results
 				%p.labels.userNum
+					%span.labelstxt User
 				%p.labels.compNum
+					%span.labelstxt Computer
 
 
 

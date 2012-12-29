@@ -75,3 +75,13 @@ div.results {
   div.results p.compNum {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cccccc), color-stop(100%, whitesmoke));
     /* Safari 4+, Chrome 2+ */ }
+
+p.labels {
+  position: relative; }
+
+span.labelstxt {
+  display: block;
+  font-size: small;
+  position: absolute;
+  top: 35px;
+  width: 100%; }

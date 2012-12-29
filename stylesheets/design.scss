@@ -89,3 +89,15 @@ div.results {
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ccc), color-stop(100%, #f5f5f5)); /* Safari 4+, Chrome 2+ */
 	}
 }
+
+p.labels {
+	position: relative;
+}
+
+span.labelstxt {
+	display: block;
+	font-size: small;
+	position: absolute;
+	top: 35px;
+	width: 100%;
+}

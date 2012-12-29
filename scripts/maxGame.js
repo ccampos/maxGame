@@ -31,6 +31,16 @@ $('.bets').click( function() {
 	};
 });
 
+/**
+* Display balance, bet, user and computer number labels
+*
+* @method displayLabels
+* @param {object} labels
+*/
+function displayLabels(labels) {
+
+};
+
 
 /**
 * Display user and computer numbers
@@ -45,7 +55,7 @@ function displayResults(elRemAttr, results) {
 	$('.compNum').html(results.compNum);
 	$('.balance').val(results.newBal);
 	$('.balance').html('$' + results.newBal);
-}
+};
 
 /**
 * @method getGameResults
