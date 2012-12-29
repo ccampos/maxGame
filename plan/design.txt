@@ -1,0 +1,13 @@
+p#balance
+
+p#betSelected
+
+button.betAmounts fiveDollars
+button.betAmounts tenDollars
+button.betAmounts twentyfiveDollars
+
+
+$('.betAmount')
+$('#myNumber')
+$('#computerNumber')
+$(#balance)

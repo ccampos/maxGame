@@ -2,7 +2,8 @@
 %html
 	%head
 		%title maxGame
-		%link{ :rel => 'stylesheet', :href => 'stylesheets/design.css'}
+		%link{ :rel => 'stylesheet', :href => 'css/ui-lightness/jquery-ui-1.9.2.custom.css'}
+		%link{ :rel => 'stylesheet', :href => 'css/design.css'}
 	%body
 		.wrapper
 			.top
@@ -12,16 +13,25 @@
 				%p.labels.bet
 					%span.labelstxt Bet
 			.bottom
+				%p.monitor.user
 				%button.bets.five{ :value => 5 } &#36;5
 				%button.bets.ten{ :value => 10 } &#36;10
 				%button.bets.twentyFive{ :value => 25 } &#36;25
+				%p.monitor.comp
 			.results
 				%p.labels.userNum
 					%span.labelstxt User
 				%p.labels.compNum
 					%span.labelstxt Computer
+			#dialog-confirm{ :title => "Confirm Bet"}
 
 
 
-		%script{ :src => 'scripts/jquery.js' }
-		%script{ :src => 'scripts/maxGame.js'}
+		%script{ :src => 'js/jquery-1.8.3.js' }
+		%script{ :src => 'js/jquery-ui-1.9.2.custom.js' }
+		%script{ :src => 'js/maxGame.js'}
+
+
+
+
+

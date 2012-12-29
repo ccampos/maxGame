@@ -1,0 +1,61 @@
+var betSelected;
+
+if confirm 'alias proceed'
+	betSelected = $(#betSelected).val();
+	execute determineWinner( betSelected, balance );
+
+/**
+* @method determineWinner
+* @param {Object} betSelectedUI
+* @param {Object} balanceUI
+*/
+
+determineWinner( betSelectedUI, balanceUI ) {
+	var betAmount,
+		balance,
+		myRandomNumber,
+		computerRandomNumber;
+
+	// UI values
+	betAmount = betSelectedUI.val();
+	balance = balanceUI.val();
+
+	// disable bet buttons
+	$('.betAmounts').disable();
+
+	// delay
+	setTimeout(delay, 2000);
+
+	// random numbers
+	myRandomNumber = Math.round( Math.random() * 100;
+	computerRandomNumber = Math.round( Math.random() * 100;
+
+	// display my number
+	$('#myNumber').val( myRandomNumber );
+
+	// delay
+	setTimeout(delay, 2000);
+
+	// display computer number
+	$('#computerNumber').val( computerRandomNumber );
+
+	// win or loose
+	if ( myRandomNumber > computerRandomNumber ) {
+		newBalance = balance + betAmount;
+		alert('You won!');
+	} else {
+		alert('You did not win!');
+		newBalance = balance - betAmount;
+	}
+
+	// display new balance
+	$('#balance').val( newBalance );
+
+	// reset bet buttons to active
+	$('.betAmounts').enable();
+
+}
+
+function delay() {
+	console.log('delaying');
+}
