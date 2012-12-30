@@ -35,7 +35,6 @@ $('.bets').click( function() {
 			}
 		});
 	});
-	// proceed = confirm('Please confirm: $' + bet + ' bet');
 	
 	function init() {
 		if ( proceed ) {
