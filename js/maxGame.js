@@ -22,48 +22,43 @@ $('.bets').click( function() {
 			buttons: {
 				Confirm: function() {
 					proceed = true;
+					console.log('proceed', proceed);
 					$(this).dialog('close');
+					init();
 				},
 				Cancel: function() {
 					proceed = false;
+					console.log('proceed', proceed);
 					$(this).dialog('close');
+					init();
 				}
 			}
 		});
 	});
-	proceed = confirm('Please confirm: $' + bet + ' bet');
+	// proceed = confirm('Please confirm: $' + bet + ' bet');
 	
-	if ( proceed ) {
-		$('.bet').html( '&#36;' + bet );
-		$('.bets').attr('disabled', '');
+	function init() {
+		if ( proceed ) {
+			$('.bet').html( '&#36;' + bet );
+			$('.bets').attr('disabled', '');
 
 
-		results = getGameResults(bet, balance);
+			results = getGameResults(bet, balance);
 
-		var property;
-		for (property in results) {
-			console.log('results.' + property + ': ' + results[property]);
-		}
+			var property;
+			for (property in results) {
+				console.log('results.' + property + ': ' + results[property]);
+			}
 
-		console.log('delay');
-		console.log('');
-		elRemAttr = $('.bets');
-		setTimeout( function() {
-			displayResults(elRemAttr, results);
-		}, 1000);
+			console.log('delay');
+			console.log('');
+			elRemAttr = $('.bets');
+			setTimeout( function() {
+				displayResults(elRemAttr, results);
+			}, 1000);
+		};
 	};
 });
-
-/**
-* Display balance, bet, user and computer number labels
-*
-* @method displayLabels
-* @param {object} labels
-*/
-function displayLabels(labels) {
-
-};
-
 
 /**
 * Display user and computer numbers
