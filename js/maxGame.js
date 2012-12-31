@@ -13,10 +13,10 @@ $('.bets').click( function() {
 	bet = $(this).val();
 	balance = parseInt($('.balance').html().replace('$', ''));
 
+	$('#dialog-confirm p').html('&#36;' + bet);
 
 	$(function() {
 		$('#dialog-confirm').dialog({
-			height: 140,
 			modal: true,
 			resizable: false,
 			buttons: {
@@ -35,6 +35,8 @@ $('.bets').click( function() {
 			}
 		});
 	});
+
+	// $('#dialog-confirm p').empty();
 	
 	function init() {
 		if ( proceed ) {
