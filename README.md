@@ -1,4 +1,4 @@
 maxGame
 =======
 
-winner is player with highest number
+Winner is player with highest number
