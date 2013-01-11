@@ -1,5 +1,8 @@
 $(document).ready(function() {
-		$('p.monitor').fadeTo(0, 0);
+	var balance = $('.balance').attr('value');
+	$('p.monitor').fadeTo(0, 0);
+	// display balance from value attribute
+	$('.balance').html('&#36;' + balance);
 });
 
 $('.bets').click( function() {
@@ -35,8 +38,6 @@ $('.bets').click( function() {
 			}
 		});
 	});
-
-	// $('#dialog-confirm p').empty();
 	
 	function init() {
 		if ( proceed ) {
@@ -62,6 +63,19 @@ $('.bets').click( function() {
 });
 
 /**
+* Display Entire Game Result - win or loose
+*
+* @method triggerEntireGameResult
+* @return {object} jQuery UI Dialog Box
+*/
+function triggerEntireGameResult() {
+	$('#dialog-gameResult').dialog({
+		modal: true,
+		resizable: false,
+	});
+}
+
+/**
 * Display user and computer numbers
 *
 * @method displayResults
@@ -69,16 +83,30 @@ $('.bets').click( function() {
 * @param {object} results
 */
 function displayResults(elRemAttr, results) {
+	var upperLimit = 100
+	var lowerLimit = 0;
+
 	elRemAttr.removeAttr('disabled');
 	$('.userNum').html(results.userNum);
 	$('.compNum').html(results.compNum);
 	$('.balance').val(results.newBal);
 	$('.balance').html('$' + results.newBal);
+
 	if (results.userNum > results.compNum) {
 		$('p.monitor.user').fadeTo(100, 1);
 	} else {
 		$('p.monitor.comp').fadeTo(100, 1);
 	};
+
+	if (results.newBal <= lowerLimit) {
+		$('.bets').attr('disabled', '');
+		$('#dialog-gameResult p').html('Balance is at or below $'+ lowerLimit + '<br />You lost');
+		triggerEntireGameResult();
+	} else if (results.newBal >= upperLimit) {
+		$('.bets').attr('disabled', '');	
+		$('#dialog-gameResult p').html('Balance is at or above $'+ upperLimit + '<br />You won!');
+		triggerEntireGameResult();
+	}
 };
 
 /**

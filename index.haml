@@ -7,8 +7,7 @@
 	%body
 		.wrapper
 			.top
-				%p.labels.balance{ :value => 100 }
-					&#36;100
+				%p.labels.balance{ :value => 50 }
 					%span.labelstxt Balance
 				%p.labels.bet
 					%span.labelstxt Bet
@@ -25,6 +24,9 @@
 					%span.labelstxt Computer
 		
 		#dialog-confirm{ :title => "Confirm Bet"}
+			%p
+
+		#dialog-gameResult{ :title => "Result"}
 			%p
 
 		%script{ :src => 'js/jquery-1.8.3.js' }
